@@ -1,0 +1,194 @@
+{
+	"categories": [{
+		"categoryId": "CLOTHES",
+		"displayName": "Clothing",
+		"products": [{
+			"displayName": "Layered Luna Dress",
+			"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130212067197_005_b",
+		}, {
+			"displayName": "Picotage Sheath",
+			"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130336418181_060_b",
+		}],
+		"children": [{
+			"categoryId": "CLOTHES-NEW",
+			"displayName": "New Arrivals",
+			"children": [{
+				"categoryId": "CLOTHES-NEW-DRESSES",
+				"displayName": "Dresses",
+				"children": [],
+				"products": [{
+					"displayName": "Layered Luna Dress",
+					"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130212067197_005_b",
+				}, {
+					"displayName": "Picotage Sheath",
+					"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130336418181_060_b",
+				}],
+			}, {
+				"categoryId": "CLOTHES-NEW-SWEATERS",
+				"displayName": "Sweaters",
+				"children": [],
+				"products": [{
+					"displayName": "Aislinn Cardigan",
+					"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4113265408620_011_b",
+				}, {
+					"displayName": "Wynne Cardigan",
+					"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4114352955159_011_b",
+				}],
+			}],
+			"products": [{
+				"displayName": "Skyfall Maxi Dress",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130342380045_029_b",
+			}, {
+				"displayName": "Windowpane Halter Jumpsuit",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4123800430112_009_b?",
+			}],
+		}, {
+			"categoryId": "CLOTHES-DRESSES",
+			"displayName": "Dresses",
+			"children": [],
+			"products": [{
+				"displayName": "Sanara Denim Dress",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130581485810_092_b",
+			}, {
+				"displayName": "Denim Tie-Neck Tunic Dress",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4130259830022_003_b",
+			}],
+		}, {
+			"categoryId": "CLOTHES-TOPS",
+			"displayName": "Tops",
+			"parentCatId": "CLOTHES",
+			"children": [],
+			"products": [{
+				"displayName": "Wynwood Buttondown",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4110265158822_001_b",
+			}, {
+				"displayName": "Sleeveless Buttondown Tunic",
+				"imgUrl": "http://images.anthropologie.com/is/image/Anthropologie/4110265410330_010_b",
+			}],
+		}],
+	}, {
+		"categoryId": "JEWELRYACCESSORIES",
+		"displayName": "Shoes & Accessories",
+		"children": [{
+			"categoryId": "JEWELRYACCESSORIES-NEW",
+			"displayName": "New Arrivals",
+			"children": [{
+				"categoryId": "SHOES-NEW",
+				"displayName": "Shoes",
+				"children": [],
+			}, {
+				"categoryId": "JWLACC-NEW-JEWELRY",
+				"displayName": "Jewelry",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRYACCESSORIES-NEW-BAGS",
+				"displayName": "Bags, Clutches & Travel",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRYACCESSORIES-NEW-COLDWEATHER",
+				"displayName": "Hats & Scarves",
+				"children": [],
+			}, {
+				"categoryId": "JWLACC-NEW-BELTS",
+				"displayName": "Belts",
+				"children": [],
+			}, {
+				"categoryId": "JWLACC-NEW-HATSHAIR",
+				"displayName": "Hair Accessories",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRYACCESSORIES-NEW-EYEWEAR",
+				"displayName": "Eyewear",
+				"children": [],
+			}],
+		}, {
+			"categoryId": "SHOES",
+			"displayName": "Shoes",
+			"children": [{
+				"categoryId": "SHOES-BOOTS",
+				"displayName": "Boots",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-HEELS",
+				"displayName": "Heels & Wedges",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-FLATS",
+				"displayName": "Flats",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-COLDWEATHER",
+				"displayName": "Weather Boots",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-SNEAKERS",
+				"displayName": "Sneakers",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-HEELS-SPECIAL",
+				"displayName": "Party & Evening",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-LEGWEAR",
+				"displayName": "Socks & Tights",
+				"children": [],
+			}, {
+				"categoryId": "SHOES-ANTHRO-EXCLUSIVES",
+				"displayName": "Anthropologie Exclusives",
+				"children": [],
+			}],
+		}, {
+			"categoryId": "ACCESSORIES-JEWELRY",
+			"displayName": "Jewelry",
+			"children": [{
+				"categoryId": "JEWELRY-NECKLACES",
+				"displayName": "Necklaces",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRY-EARRINGS",
+				"displayName": "Earrings",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRY-BRACELETS",
+				"displayName": "Bracelets & Watches",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRY-RINGS",
+				"displayName": "Rings",
+				"children": [],
+			}, {
+				"categoryId": "ACCESSORIES-FINE-JEWELRY",
+				"displayName": "Fine Jewelry",
+				"children": [],
+			}],
+		}, {
+			"categoryId": "ACCESSORIES-BAGS",
+			"displayName": "Bags, Clutches & Travel",
+			"children": [{
+				"categoryId": "BAGS-TOTES",
+				"displayName": "Totes",
+				"children": [],
+			}, {
+				"categoryId": "ACCESSORIES-BAGS-HANDBAGS",
+				"displayName": "Handbags",
+				"children": [],
+			}, {
+				"categoryId": "ACCESSORIES-CLUTCHES",
+				"displayName": "Clutches & Wallets",
+				"children": [],
+			}, {
+				"categoryId": "BAGS-TRAVEL-ACCESSORIES",
+				"displayName": "Travel & Weekenders",
+				"children": [],
+			}, {
+				"categoryId": "JEWELRYACCESSORIES-TECH",
+				"displayName": "Phone Cases and Tech",
+				"children": [],
+			}],
+		}],
+	}, {
+		"categoryId": "HOME",
+		"displayName": "House & Home",
+		"children": [],
+	}]
+}
