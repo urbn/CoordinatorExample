@@ -16,34 +16,12 @@ class RootCoordinator: Coordinator {
     let navController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    lazy var rootCategories: [Category] = {
-        var rootCats: [Category]?
-        if let path = NSBundle.mainBundle().pathForResource("data", ofType: "json") {
-            do {
-                let jsonData = try NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                do {
-                    let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
-                    
-                    if let categories = json["categories"] as? [[String: AnyObject]] {
-                        rootCats = Category.inflateCategoriesWithData(categories)
-                    }
-                } catch {
-                    print("error serializing JSON: \(error)")
-                }
-            } catch {
-                print("error reading data: \(error)")
-            }
-        }
-        
-        return rootCats ?? []
-    }()
-    
     init(navController: UINavigationController) {
         self.navController = navController
     }
     
     func start() {
-        let catVC = CategoryViewController(categories: rootCategories)
+        let catVC = CategoryViewController(categories: Category.rootCategories)
         catVC.delegate = self
         addSignInButtonToVC(catVC)
         navController.pushViewController(catVC, animated: false)

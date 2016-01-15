@@ -18,6 +18,7 @@
 		45CB01271C481D940086EE8C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB01261C481D940086EE8C /* ProductDetailViewController.swift */; };
 		45CB01291C4821300086EE8C /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB01281C4821300086EE8C /* AuthenticationCoordinator.swift */; };
 		45CB012F1C4827090086EE8C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB012E1C4827090086EE8C /* SignInViewController.swift */; };
+		45CB01311C493A930086EE8C /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB01301C493A930086EE8C /* CategoryTableViewCell.swift */; };
 		8B255ACA141BB4492463F614 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDE8E89F52217C1420EF708 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		45CB01261C481D940086EE8C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		45CB01281C4821300086EE8C /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
 		45CB012E1C4827090086EE8C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		45CB01301C493A930086EE8C /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		63459AFF92E3B476177718CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6DDE8E89F52217C1420EF708 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 				45CB00FA1C46D1D90086EE8C /* AppDelegate.swift */,
 				45CB012B1C4821450086EE8C /* Coordinators */,
 				45CB012A1C48213C0086EE8C /* ViewControllers */,
+				45CB01301C493A930086EE8C /* CategoryTableViewCell.swift */,
 				45CB01101C46D8780086EE8C /* Models.swift */,
 				45CB01011C46D1D90086EE8C /* Assets.xcassets */,
 				45CB01031C46D1D90086EE8C /* LaunchScreen.storyboard */,
@@ -252,6 +255,7 @@
 				45CB01111C46D8780086EE8C /* Models.swift in Sources */,
 				45CB01251C4804710086EE8C /* SubCategoryViewController.swift in Sources */,
 				45CB01271C481D940086EE8C /* ProductDetailViewController.swift in Sources */,
+				45CB01311C493A930086EE8C /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
