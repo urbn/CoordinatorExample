@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol AuthenticationCoordinatorDelegate: class {
+protocol AuthenticationCoordinatorCoordinatorProtocol: class {
     func didDismissCoordinator(coordinator: AuthenticationCoordinator, withSuccess success: Bool)
 }
 
 class AuthenticationCoordinator: Coordinator {
     let rootViewController: UIViewController
     let navController: UINavigationController = UINavigationController()
-    weak var delegate: AuthenticationCoordinatorDelegate?
+    weak var coordinator: AuthenticationCoordinatorCoordinatorProtocol?
     
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
@@ -24,7 +24,7 @@ class AuthenticationCoordinator: Coordinator {
     func start() {
         let signInVC = SignInViewController()
         signInVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "canceled")
-        signInVC.delegate = self
+        signInVC.coordinator = self
         navController.pushViewController(signInVC, animated: false)
 
         rootViewController.presentViewController(navController, animated: true, completion: nil)
@@ -36,12 +36,12 @@ class AuthenticationCoordinator: Coordinator {
     
     func dismissWithSuccess(success: Bool) {
         navController.dismissViewControllerAnimated(true) { () -> Void in
-            self.delegate?.didDismissCoordinator(self, withSuccess: success)
+            self.coordinator?.didDismissCoordinator(self, withSuccess: success)
         }
     }
 }
 
-extension AuthenticationCoordinator: SignInViewControllerDelegate {
+extension AuthenticationCoordinator: SignInViewControllerCoordinatorProtocol {
     func didRequestSignIn() {
         dismissWithSuccess(true)
     }

@@ -22,7 +22,7 @@ class RootCoordinator: Coordinator {
     
     func start() {
         let catVC = CategoryViewController(categories: Category.rootCategories)
-        catVC.delegate = self
+        catVC.coordinator = self
         addSignInButtonToVC(catVC)
         navController.pushViewController(catVC, animated: false)
     }
@@ -33,23 +33,23 @@ class RootCoordinator: Coordinator {
     
     @objc func signInTapped() {
         let authCoordinator = AuthenticationCoordinator(rootViewController: navController)
-        authCoordinator.delegate = self
+        authCoordinator.coordinator = self
         authCoordinator.start()
         childCoordinators.append(authCoordinator)
     }
 }
 
-extension RootCoordinator: CategoryViewControllerDelegate, SubCategoryViewControllerDelegate {
+extension RootCoordinator: CategoryViewControllerCoordinatorProtocol, SubCategoryViewControllerCoordinatorProtocol {
     func didRequestCategory(category: Category) {
         if !category.childCategories.isEmpty {
             let catVC = CategoryViewController(categories: category.childCategories)
-            catVC.delegate = self
+            catVC.coordinator = self
             addSignInButtonToVC(catVC)
             navController.pushViewController(catVC, animated: true)
         }
         else if !category.products.isEmpty {
             let subCatVC = SubCategoryViewController(category: category)
-            subCatVC.delegate = self
+            subCatVC.coordinator = self
             addSignInButtonToVC(subCatVC)
             navController.pushViewController(subCatVC, animated: true)
         }
@@ -67,7 +67,7 @@ extension RootCoordinator: CategoryViewControllerDelegate, SubCategoryViewContro
     }
 }
 
-extension RootCoordinator: AuthenticationCoordinatorDelegate {
+extension RootCoordinator: AuthenticationCoordinatorCoordinatorProtocol {
     func didDismissCoordinator(coordinator: AuthenticationCoordinator, withSuccess success: Bool) {
         childCoordinators.popLast()
         

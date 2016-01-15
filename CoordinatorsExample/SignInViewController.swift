@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SignInViewControllerDelegate: class {
+protocol SignInViewControllerCoordinatorProtocol: class {
     func didRequestSignIn()
     func didRequestCreateAccount()
 }
 
 class SignInViewController: UIViewController {
-    weak var delegate: SignInViewControllerDelegate?
+    weak var coordinator: SignInViewControllerCoordinatorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +45,10 @@ class SignInViewController: UIViewController {
     }
     
     func signInTapped() {
-        self.delegate?.didRequestSignIn()
+        self.coordinator?.didRequestSignIn()
     }
     
     func createAccountTapped() {
-        self.delegate?.didRequestCreateAccount()
+        self.coordinator?.didRequestCreateAccount()
     }
 }

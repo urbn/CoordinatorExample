@@ -9,14 +9,14 @@
 import UIKit
 import Kingfisher
 
-protocol CategoryViewControllerDelegate: class {
+protocol CategoryViewControllerCoordinatorProtocol: class {
     func didRequestProduct(product: Product)
     func didRequestCategory(category: Category)
 }
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let categories: [Category]
-    weak var delegate: CategoryViewControllerDelegate?
+    weak var coordinator: CategoryViewControllerCoordinatorProtocol?
     
     init(categories: [Category]) {
         self.categories = categories
@@ -53,7 +53,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         cell?.configWithCategory(categories[indexPath.row])
         
         cell?.productTappedBlock = { (product: Product) in
-            self.delegate?.didRequestProduct(product)
+            self.coordinator?.didRequestProduct(product)
         }
         
         return cell!
@@ -61,6 +61,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.delegate?.didRequestCategory(categories[indexPath.row])
+        self.coordinator?.didRequestCategory(categories[indexPath.row])
     }
 }

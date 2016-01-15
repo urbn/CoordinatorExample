@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SubCategoryViewControllerDelegate: class {
+protocol SubCategoryViewControllerCoordinatorProtocol: class {
     func didRequestProduct(product: Product)
 }
 
 class SubCategoryViewController: UIViewController {
     let products: [Product]
-    weak var delegate: SubCategoryViewControllerDelegate?
+    weak var coordinator: SubCategoryViewControllerCoordinatorProtocol?
     
     init(category: Category) {
         self.products = category.products
@@ -54,6 +54,6 @@ class SubCategoryViewController: UIViewController {
     }
     
     func productTapped(sender: UIButton) {
-        self.delegate?.didRequestProduct(products[sender.tag])
+        self.coordinator?.didRequestProduct(products[sender.tag])
     }
 }
